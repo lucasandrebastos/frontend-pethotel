@@ -1,9 +1,9 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { Home } from "./pages/Home";
+import { Dashboard } from "./pages/Dashboard";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <Home />
+    <Dashboard />
   </StrictMode>
 );
