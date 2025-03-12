@@ -1,6 +1,5 @@
 import {
   Box,
-  Button,
   Drawer,
   List,
   ListItem,
@@ -44,7 +43,7 @@ export const Menu = () => {
             <Logo />
           </Box>
           <List>
-            {["Dashboard", "Tutores", "Tesourinhos"].map((text, index) => (
+            {["Dashboard", "Tutores", "Tesourinhos", "neworder"].map((text) => (
               <ListItem key={text} disablePadding>
                 <ListItemButton
                   onClick={() => navigate(`/${text.toLowerCase()}`)}

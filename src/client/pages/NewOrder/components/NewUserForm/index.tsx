@@ -40,10 +40,11 @@ export const NewUserForm = () => {
         component="form"
         onSubmit={handleSubmit}
         sx={{
-          m: 1,
           width: "25ch",
           display: "flex",
           flexDirection: "column",
+          gap: "5px",
+          m: 1,
         }}
         noValidate
         autoComplete="off"

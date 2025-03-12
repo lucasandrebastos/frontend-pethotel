@@ -4,8 +4,8 @@ import { NewUserForm } from "./pages/NewOrder/components/NewUserForm";
 export const Client = () => {
   return (
     <>
-      <NewReservationForm />
       <NewUserForm />
+      <NewReservationForm />
     </>
   );
 };
