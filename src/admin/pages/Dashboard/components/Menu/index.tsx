@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
+import Logo from "../Logo";
 
 export const Menu = () => {
   const [open, setOpen] = useState(false);
@@ -39,16 +40,15 @@ export const Menu = () => {
           role="presentation"
           onClick={toggleDrawer(false)}
         >
-          <Button></Button>
+          <Box sx={{ padding: "12px 40px 12px 40px" }}>
+            <Logo />
+          </Box>
           <List>
-            {[
-              "Dashboard",
-              "Em construção",
-              "Em construção",
-              "Em construção",
-            ].map((text, index) => (
+            {["Dashboard", "Tutores", "Tesourinhos"].map((text, index) => (
               <ListItem key={text} disablePadding>
-                <ListItemButton onClick={() => navigate(`/${text}`)}>
+                <ListItemButton
+                  onClick={() => navigate(`/${text.toLowerCase()}`)}
+                >
                   <ListItemText primary={text} />
                 </ListItemButton>
               </ListItem>

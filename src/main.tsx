@@ -7,10 +7,12 @@ import { Client } from "./client";
 import { Dashboard } from "./admin/pages/Dashboard";
 import BasicTabs from "./admin/pages/Dashboard/components/Tabs";
 import { Menu } from "./admin/pages/Dashboard/components/Menu";
+import { Header } from "./admin/pages/Dashboard/components/Header";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
+      <Header />
       <Menu />
       <Routes>
         <Route path="dashboard" element={<Dashboard />}>

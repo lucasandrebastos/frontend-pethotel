@@ -8,7 +8,11 @@ import {
 } from "@mui/material";
 import React from "react";
 
-export const BookingCard = () => {
+interface IBookingCardProps {
+  status: string;
+}
+
+export const BookingCard = ({ status }: IBookingCardProps) => {
   const card = (
     <React.Fragment>
       <CardContent>
@@ -28,22 +32,21 @@ export const BookingCard = () => {
       <Typography align="center" color="success" variant="h5" component="div">
         R$1849,00
       </Typography>
-
-      <CardActions sx={{ justifyContent: "center" }}>
-        <Button color="success" size="small">
-          Aceitar
-        </Button>
-        <Button color="error" size="small">
-          Recusar
-        </Button>
-      </CardActions>
+      {status === "pending" && (
+        <CardActions sx={{ justifyContent: "center" }}>
+          <Button color="success" size="small">
+            Aceitar
+          </Button>
+          <Button color="error" size="small">
+            Recusar
+          </Button>
+        </CardActions>
+      )}
     </React.Fragment>
   );
   return (
     <Box sx={{ maxWidth: 275 }}>
-      <Card variant="outlined" elevation={3}>
-        {card}
-      </Card>
+      <Card elevation={3}>{card}</Card>
     </Box>
   );
 };
