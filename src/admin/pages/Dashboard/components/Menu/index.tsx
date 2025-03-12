@@ -8,6 +8,7 @@ import {
   ListItemText,
 } from "@mui/material";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router";
 
 export const Menu = () => {
   const [open, setOpen] = useState(false);
@@ -16,6 +17,7 @@ export const Menu = () => {
     setOpen(newOpen);
   };
 
+  const navigate = useNavigate();
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
       if (event.clientX < 10) {
@@ -46,7 +48,7 @@ export const Menu = () => {
               "Em construção",
             ].map((text, index) => (
               <ListItem key={text} disablePadding>
-                <ListItemButton>
+                <ListItemButton onClick={() => navigate(`/${text}`)}>
                   <ListItemText primary={text} />
                 </ListItemButton>
               </ListItem>

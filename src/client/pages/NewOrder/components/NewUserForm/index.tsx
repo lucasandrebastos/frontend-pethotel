@@ -1,5 +1,5 @@
 import { Box, Button, TextField } from "@mui/material";
-import { createNewUser } from "../../../../service/userService";
+import { createNewUser } from "../../../../../admin/service/userService";
 import { useState } from "react";
 export const NewUserForm = () => {
   const [formData, setFormData] = useState({
